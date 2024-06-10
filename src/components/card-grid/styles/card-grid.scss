@@ -1,0 +1,22 @@
+@import '../../../styles/variables.scss';
+
+.card-grid {
+  display: grid;
+  gap: 25px;
+
+  @media (min-width: $breakpoint-xs) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: $breakpoint-sm) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media (min-width: $breakpoint-md) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  @media (min-width: $breakpoint-lg) {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}

@@ -1,0 +1,20 @@
+.planet {
+  &__image {
+    width: 100%;
+    display: block;
+  }
+
+  &__info {
+    height: 120px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &__terrain {
+      &::first-letter {
+        text-transform: capitalize;
+      }
+    }
+  }
+}
