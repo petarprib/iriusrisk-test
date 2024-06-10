@@ -1,30 +1,35 @@
-# React + TypeScript + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+### Create an `.env.local` with the content:
+```
+VITE_API_URL=https://swapi.tech/api/
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+### The commands you will need are:
+```
+pnpm install
+pnpm dev
+pnpm test
+```
+
+### Some notes and things to improve (just so you know I *do* remember :) ), in no particular order:
+
+- Adding a full SCSS theme (haven't worked with it as the main source of design in a long while)
+
+- Browser support
+
+- More accessibility features
+
+- Better design of course. Not implying this is my best by any means. I'm also much better at improving an existing one (especially with UX in mind) than creating one from scratch
+
+- Some environment and linting fixes: SCSS imports are not recognized in the order of imports, test file has squiggly lines (but tests run)
+
+- More and better component/logic/type modularization
+
+- The sorting/ordering is for the results of a given page, not all the results, in order to avoid giant batch requests (both because of loading speed and rate limiting I guess?)
+
+- It's possible I left something stranded somewhere that would otherwise logically better belong elsewhere...
+
+- `<select>` not styled
+
+- Probably something else...
+
+#### That's it from me, wish I had more time and resources to show more of my "real life" capabilities, but hopefully this was convincing enough :)
